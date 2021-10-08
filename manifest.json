@@ -1,0 +1,25 @@
+{
+    "name": "WebSave",
+    "description": "Captures network traffic",
+    "version":"0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "Popup",
+        "default_popup": "popup.html",
+        "default_icon": {}
+    },
+    "devtools_page": "devtools.html",
+    "content_security_policy": {
+    	"extension_pages": "default-src 'self';connect-src http://localhost:3000/ blob:;style-src 'self' 'unsafe-inline';"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "webRequest",
+        "alarms",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ]
+}
